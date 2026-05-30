@@ -69,7 +69,7 @@ sun.position.set(0, 3, 0);
 
 
 //custom 3d mountain model
-loader.load('public/mountain_alpine_style_gltf/scene.gltf', (gltf) => {
+loader.load('./mountain_alpine_style_gltf/scene.gltf', (gltf) => {
     scene.add(gltf.scene);
 })
 
