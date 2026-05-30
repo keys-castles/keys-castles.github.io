@@ -1,0 +1,215 @@
+body { margin: 0;  animation: fadeInAnimation ease 3s; animation-iteration-count: 1; animation-fill-mode: forwards;}
+.nav-bar {
+    color: rgb(255, 255, 255);
+    font-size: xx-large;
+    font-family: 'Bebas Neue', sans-serif;
+    position: absolute;
+    top: 15px;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar-item {
+    display: inline-block;
+    margin-inline: 1%;
+    writing-mode: horizontal-tb;
+    z-index: 10;
+    cursor:pointer;
+}
+
+.nav-bar-item-right {
+    margin-left: auto;
+    margin-right: 1%;
+}
+
+.content-about {
+    z-index: 10;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.content-projects {
+    z-index: 10;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.content-contact {
+    z-index: 10;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 80px;
+    margin-inline: auto;
+    width: fit-content;
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 75px;
+
+}
+
+.information {
+    position: absolute;
+    top: 200px;
+    left: 80px;
+    right: 80px;
+
+    font-family: 'PT Sans';
+    font-size: x-large;
+    color:white;
+
+}
+
+.fadeIn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+.socials {
+    position: absolute; left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.portfolio-items {
+    position: absolute;
+    top: 200px;
+    left: 80px;
+    right: 80px;
+    
+    display: flex;
+    flex-wrap: wrap;
+
+    font-family: 'PT Sans';
+    color: white;
+}
+
+.portfolio-item {
+    width: calc(33.33% - 20px);
+    margin-right: 5px;
+    margin-bottom: 20px;
+}
+
+.portfolio-item img {
+    width: 50%;
+    height: auto;
+    border: white 2px solid;
+}
+
+.button {
+  color: white;
+  font-size: 20px;
+  font-family: 'Bebas Neue';
+  background-color: #262C2C;
+  cursor: pointer;
+  padding: 10px;
+  box-shadow: 0px 6px 0px #4E4E48;
+  transition: all 0.1s;
+}
+
+.button-bottom-right {
+  position:absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.button-mid {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+a, a:hover, a:active, a:visited, a:focus {
+    text-decoration:none;
+    color: white;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+
+    }
+
+    100% {
+        opacity: 0;
+    }
+    
+}
+
+#loader {
+    animation: pulse ease 3s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    width: 400px;
+    height: 400px;
+    position: absolute; left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#load {
+    position: fixed; 
+    top: 0; left: 0; 
+    width: 100%; height: 100%; 
+    background: #000; 
+    z-index: 999; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px 10px;
+    height: 300px;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  
+}
+
+input {
+    background-color: #4E4E48;
+    color: white;
+    font-family: "PT Sans";
+}
+
+textarea {
+    background-color: #4E4E48;
+    color: white;
+    resize: none;
+    font-family: "PT Sans";
+    border: #767676 inset 2px;
+ 
+}
+
+::placeholder {
+  color: white;
+  opacity: 1;
+}

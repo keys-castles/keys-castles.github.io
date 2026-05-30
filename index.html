@@ -1,19 +1,111 @@
 <!DOCTYPE html>
-
 <html lang="en">
-    <head>
-        <link rel="icon" href="stylesheets/images/favicon.ico">
-        <link rel="stylesheet" href="stylesheets/homestyles.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
-        <title>Home</title>
-    </head>    
-    <body>
-        <img src="stylesheets/images/pfp1.jpg">
-        <h1><a href="about.html">Under Construction</a></h1>
-        <h2>Come back another time.</h2>
+  <head>
+    <meta charset="utf-8">
+    <title>Josue's Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100;1,100&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    </body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
+<link href="stylesheets/index.css" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  </head>
+  <body onload="splashscreen()">
+
+    <div id="load">
+      <img id="loader" src="assets/pfp1.jpg">
+    </div>
+
+    <div id="full-content" style="display: none;">
+      <div class="nav-bar">
+        <div class="nav-bar-item" id="about">
+          About
+        </div>
+        <div class="nav-bar-item" id="projects">
+          Projects
+        </div>
+        <div class="nav-bar-item" id="contact">
+          Contact
+        </div>
+        <div class="nav-bar-item-right">
+          <a href="https://github.com/keys-castles"><img src="assets/github.png" style="width: 25px;"></a>
+        </div> 
+        <div class="nav-bar-item">
+          <a href="https://ig.me/m/keys.castles"><img src="assets/Instagram_Glyph_White.png" style="width: 25px"></a>
+        </div>
+      </div>
+      <div class="content-about">
+        <div class="title">
+          Hello! I'm Josue!
+        </div>
+        <div class="information">
+          I am an undergraduate at at UC Merced pursuing a Bachelors in Computer Science.  I'm interested in everything Computer Science, from low-level hardware programming to software engineering and web dev.  I also enjoy finding creative solutions to difficult problems using programming.
+          <img src="assets/myself.jpg" style="display: block; margin-left: auto; margin-right: auto; margin-top: 50px; border-radius: 150px; height: 250px;">
+        </div>
+        
+      </div>
+      <div class="content-projects">
+        <div class="title">
+          Projects
+        </div>
+        <div class="portfolio-items">
+          <div class="portfolio-item">
+            <a href="https://jacobsladder.vercel.app/"><img src="assets/jacobsladder.png" alt="Jacobs Ladder"></a>
+            <h3>Jacobs Ladder</h3>
+            <p>Online Multiplayer PVP Platformer</p>
+          </div>
+
+          <div class="portfolio-item">
+            <a href="Boids.html"><img src="assets/Boid.png" alt="Boids Program"></a>
+            <h3>Boids Program</h3>
+            <p>Bird Simulation using Craig Reynold's Algorithm</p>
+          </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="content-contact">
+        <div class="title">
+          Contact Me
+        </div>
+        <div class="information">
+
+          <form>
+            
+            <div style="display: flex; flex-direction: row; gap: 40px; justify-content: center; width: 600px;">
+            <input type="text" id="fname" name="fname" placeholder="First Name" style="flex-grow: 1;">
+            <input type="text" id="lname" name="lname" placeholder="Last Name" style="flex-grow: 1;">
+            </div>
+            <input type="text" id="email" name="email" placeholder="Email">
+             <textarea id="msg" name="msg" placeholder="Enter message here..." style="height: 200px;"></textarea><br>
+
+          </form>
+
+          <button class="button button-mid" id="submitButton">Submit</button>
+          
+        </div>
+      </div>
+      <button class="button button-bottom-right" id="returnToBottom">Bottom of Page</button>
+    </div>
+    
+    <script>
+      var onloader;
+      function splashscreen() {
+        onloader = setTimeout(showPage, 3000);
+      }
+
+      function showPage() {
+        console.log("showing page")
+        document.getElementById("load").style.display = "none";
+        document.getElementById("full-content").style.display = "block";
+      }
+    </script>
+
+
+    <script type="module" src="scripts/three.js"></script>
+  </body>
 </html>

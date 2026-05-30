@@ -11,7 +11,7 @@ const rightMargin = boidsCanvas.width - leftMargin;
 const topMargin = 50;
 const bottomMargin = boidsCanvas.height - topMargin;
 
-const count = 100;
+const count = 25;
 const boidColor = "#FFAB00";
 
 
@@ -19,11 +19,11 @@ const boidColor = "#FFAB00";
 var health = 100;
 const boidProtectedRange = 20; // the range where the boid moves AWAY from other boids
 const boidRange = 75; // the range where the boid moves TOWARDS the center of mass of other boids
-const maxspeed = 6;
-const minspeed = 3;
-const avoidFactor = 0.4;
-const matchingFactor = 0.05;
-const centeringFactor = 0.0005;
+const maxspeed = 4;
+const minspeed = 2;
+const avoidFactor = 1;
+const matchingFactor = 0.02;
+const centeringFactor = 0.0003;
 const turnFactor = 0.4;
 
 //boid array
@@ -49,6 +49,7 @@ class boid {
     drawBoid(b){
         
         b.fillStyle = boidColor;
+        b.strokeStyle = '#000000';
         b.translate(this.x, this.y);
         b.rotate(Math.atan2(this.dy, this.dx));
         b.translate(-this.x, -this.y);
@@ -161,14 +162,14 @@ function setSpeedLimit(boid){
 }
 
 function drawBoidStats(health){
-    b.font = "20px Courier New";
+    b.font = "20px PT Sans";
     b.fillStyle = "#FFFFFF";
     b.fillText("Health: " + health, 10, 30)
     b.fillText("Happiness: " + health, 200, 30);
 }
 
 function drawDevStats(seperation, alignment, cohesion){
-    b.font = "10px Courier New";
+    b.font = "10px PT Sans";
     b.fillStyle = "#FFFFFF";
     b.fillText("Seperation: " + seperation, 10, 380);
     b.fillText("Alignment: " + alignment, 200, 380);
